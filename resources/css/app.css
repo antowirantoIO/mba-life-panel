@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#banner_container:hover #delete_banner {
+    display: block;
+    opacity: 1;
+}
