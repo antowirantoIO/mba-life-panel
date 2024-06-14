@@ -5,10 +5,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
-Route::get('/management/banner/json', [BannerController::class, 'getJsonBanner'])->middleware(['auth', 'verified'])->name('management.banner.json');
+Route::get('/management/banner/json', [BannerController::class, 'getJsonBanner'])->name('management.banner.json');
 
 Route::get('/management/banner', [BannerController::class, 'index'])->middleware(['auth', 'verified'])->name('management.banner');
 Route::get('/management/banner/edit/{banner:id}', [BannerController::class, 'edit'])->middleware(['auth', 'verified'])->name('management.banner.edit');
